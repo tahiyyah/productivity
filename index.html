@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>productivity</title>
+</head>
+<body>
+    <div class="first-row">
+        <div class="pomodoro-wrapper">
+            <h1 class="heading"><i class="fa-solid fa-clock"></i> pomodoro timer</h1>
+            <p class="timer" id="timer">25:00</p>
+            <p class="break" id="break">break 00:00</p>
+
+            <div clas\s="button-wrapper">
+                <button id="start">start</button>
+                <button id="pause">pause</button>
+                <button id="reset">reset</button>
+            </div>
+        </div>
+
+        <div class="calendar-wrapper" id="calendar-wrapper">
+            <div class="calendar">
+                <div class="calendar-header">
+                    <div id="prev" class="calendar-nav-btn"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div id="month-year"></div>
+                    <div id="next" class="calendar-nav-btn"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+                <div class="weekdays">
+                    <div>sun</div>
+                    <div>mon</div>
+                    <div>tue</div>
+                    <div>wed</div>
+                    <div>thu</div>
+                    <div>fri</div>
+                    <div>sat</div>
+                </div>
+                <div class="days" id="days"></div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="todo-wrapper">
+        <div class="todo-wrapper-query">
+            <h3 class="heading" style="font-size: 20px;"><i class="fa-solid fa-clipboard-list"></i> to do list:</h3>
+
+            <input type="text" name="task" id="task" class="taskBox" placeholder="enter a task" style="border-radius: 11px; border: none; background-color: rgb(220, 215, 196);">
+            <button id="add" id="enter" class="add">add</button>
+        </div>
+        <ul id="todoList">
+        </ul>
+    </div>
+
+    <div class="notes-wrapper">
+        
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
