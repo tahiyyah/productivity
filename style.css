@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins";
+    background-color: rgb(255, 247, 222);
+}
+
+.pomodoro-wrapper {
+    text-align: center;
+    padding: 20px;
+}
+
+.heading {
+    color: rgb(55, 85, 61);
+}
+
+.timer {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: -7px;
+    color: rgb(98, 0, 0)
+}
+
+button {
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#start {
+    background-color: rgb(112, 146, 112);
+}
+#start:hover {
+    background-color: rgb(86, 111, 86);
+}
+
+#pause {
+    background-color: rgb(243, 205, 139);
+}
+#pause:hover {
+    background-color: rgb(189, 161, 112);
+}
+
+#reset {
+    background-color: rgb(203, 149, 149);
+}
+#reset:hover {
+    background-color: rgb(156, 114, 114);
+}
+
+.break {
+    font-size: 12px;
+    color: rgb(124, 124, 124);
+    padding-bottom: 60px;
+}
+
+.todo-wrapper {
+    text-align: center;
+
+}
+
+.taskBox {
+    padding: 5px 7px;
+    font-size: 15px;
+}
+
+.add {
+    font-size: 15px;
+    background-color: rgb(140, 117, 160);
+    border-radius: 10px;
+}
+.add:hover {
+    background-color: rgb(107, 89, 122);
+}
+
+ul li {
+    list-style: none;
+    display: flex;
+    gap: .5em;
+    padding-top: 10px;
+
+}
+ul li::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    cursor: pointer;
+}
+ul li.checked {
+    color: rgb(59, 59, 59);
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    background-image: url(checked.png);
+}
+ul li span {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    line-height: 23px;
+    color: rgb(204, 0, 0);
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+    margin-left: -35px;
+}
+ul li span:hover {
+    background-color: rgb(220, 215, 196);
+}
+
+.calendar {
+    background-color: rgb(251, 218, 218);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgb(187, 163, 163);
+    overflow: hidden;
+    width: 350px;
+    color: rgb(188, 62, 62);
+    padding: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.calendar-nav-btn {
+    cursor: pointer;
+}
+#month-year {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.weekdays, .days {
+    display: flex;
+    flex-wrap: wrap;
+}
+.days {
+    height: 240px;
+}
+.weekdays div, .days div {
+    width: 14.28%;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+}
+.days div {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.days div:hover {
+    background-color: rgb(222, 194, 194);
+    color: white;
+}
+.days .today {
+    background-color: rgba(188, 62, 62, 0.4);
+    color: white;
+}
+.days .fade {
+    color: rgb(192, 192, 192);
+}
+
+.first-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 750px){
+    .todo-wrapper-query {
+        text-align: center;
+    }
+    .calendar-wrapper {
+        margin: 30px 0 20px 0;
+    }
+}
